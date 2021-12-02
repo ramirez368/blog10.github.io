@@ -14,79 +14,22 @@ Terraform is an infrastructure as code (IaC) tool that allows you to build, chan
 ![Data Flow Diagram The following diagram shows the way data flows through the various services and data stores in Terraform Enterprise.](https://www.devopsschool.com/blog/wp-content/uploads/2021/07/terraform-architecture-components-workflow-1.jpg)
 
 
-## Getting Started with Amazon EC2
-Amazon EC2 offers the broadest and deepest compute platform with choice of processor, storage, networking, operating system, and purchase model. We offer the fastest processors in the cloud and we are the only cloud with 400 Gbps ethernet networking. We have the most powerful GPU instances for machine learning training and graphics workloads, as well as the lowest cost-per-inference instances in the cloud. More SAP, HPC, Machine Learning, and Windows workloads run on AWS than any other cloud.
+## Key Features
+»Infrastructure as Code
+You describe your infrastructure using Terraform's high-level configuration language in human-readable, declarative configuration files. This allows you to create a blueprint that you can version, share, and reuse.
 
-## Reliable and Scalable Infrastructure
-Increase or decrease capacity within minutes and provide 99.99% availability for each Amazon EC2 region.
+## Execution Plans
+Terraform generates an execution plan describing what it will do and asks for your approval before making any infrastructure changes. This allows you to review changes before Terraform creates, updates, or destroys infrastructure.
 
-## Secure Your Applications
-Provide various security standards and features, reduce the risk of human error and eliminate the attack surface.
+## Resource Graph
+Terraform builds a resource graph and creates or modifies non-dependent resources in parallel. This allows Terraform to build resources as efficiently as possible and gives you greater insight into your infrastructure.
 
-## Easy Migration
-Get started quickly through AWS Migration Tools, AWS Managed Services, or Amazon Lightsail with the help from AWS Professional Services, AWS Support and APN Partners.
-
-## Flexible Pricing
-Offer five pricing models to pay for Amazon EC2 instances: On-Demand, Savings Plans, Dedicated Hosts, Spot Instances and Per Second Billing.
-
-![ ](https://i1.wp.com/cloudkatha.com/wp-content/uploads/2021/08/AWS-EC2-Instance-Purchasing-Options-All-You-Need-to-Know-Featured.png?w=1023&ssl=1)
-
-## Create your EC2 resources and launch your EC2 instance
-
-## Important: 
-Before you can launch and connect to an Amazon EC2 instance, you need to create a key pair, unless you already have one. You can create a key pair using the Amazon EC2 console, and then you can launch your EC2 instance.
-
-## To create a key pair
-Look in Amazon EC2 in the Amazon EC2 User Guide.
-
-## Steps to Launch EC2 Instance and mount an EFS file system
+## Change Automation
+Terraform can apply complex changesets to your infrastructure with minimal human interaction. When you update configuration files, Terraform determines what changed and creates incremental execution plans that respect dependencies.
 
 
-1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+![ ](https://www.youtube.com/watch?v=h970ZBgKINg)
 
-2. Choose Launch Instance.
-
-3. Choose an Amazon Machine Image (AMI), find an Amazon Linux 2 AMI at the top of the list and choose Select.
-
-4. Choose an Instance Type, choose Next: Configure Instance Details.
-
-5. Configure Instance Details, provide the following information:
-
-* Leave Number of instances at one.
-
-* Leave Purchasing option at the default setting.
-
-* For Network, choose the entry for the same VPC that you noted when you created your EFS file system in Step 1: Create your Amazon EFS file system.
-
-* For Subnet, choose a default subnet in any Availability Zone.
-
-* For File systems, make sure that the EFS file system that you created in Step 1: Create your Amazon EFS file system is selected. The path shown next to the file system ID is the mount point that the EC2 instance will use, which you can change.
-
-* The User data automatically includes the commands for mounting your Amazon EFS file system.
-
-6. Choose Next: Add Storage.
-
-7. Choose Next: Add Tags.
-
-8. Name your instance and choose Next: Configure Security Group.
-
-9. In Step 6: Configure Security Group, set Assign a security group to Select an existing security group. Choose the default security group to make sure that it can access your EFS file system.
-
-You can't access your EC2 instance by Secure Shell (SSH) using this security group. SSH access isn't required for this exercise. To add access by SSH later, you can edit the default security and add a rule to allow SSH. Or you can create a new security group that allows SSH. You can use the following settings to add SSH access:
-
-* Type: SSH
-
-* Protocol: TCP
-
-* Port Range: 22
-
-* Source: Anywhere 0.0.0.0/0
-
-10. Choose Review and Launch.
-
-11. Choose Launch.
-
-12. Select the check box for the key pair that you created, and then choose Launch Instances.
 
 
 
