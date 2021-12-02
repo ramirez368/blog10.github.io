@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-## [Lets Get Started with Terrafoerm](https://www.youtube.com/watch?v=HmxkYNv1ksg)
+## [Lets Get Started with Terraform](https://www.youtube.com/watch?v=HmxkYNv1ksg)
 
 [//]: #  There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
