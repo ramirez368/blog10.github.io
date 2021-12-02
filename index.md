@@ -10,11 +10,8 @@ layout: default
 # Introduction to Terraform
 Terraform is an infrastructure as code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently. This includes low-level components such as compute instances, storage, and networking, as well as high-level components such as DNS entries, SaaS features, etc. Terraform can manage both existing service providers and custom in-house solutions.
 
-Below, HashiCorp co-founder and CTO Armon Dadgar describes how Terraform can help solve common infrastructure challenges.
 
-
-![Data Flow Diagram
-The following diagram shows the way data flows through the various services and data stores in Terraform Enterprise.](https://www.devopsschool.com/blog/wp-content/uploads/2021/07/terraform-architecture-components-workflow-1.jpg)
+![Data Flow Diagram The following diagram shows the way data flows through the various services and data stores in Terraform Enterprise.](https://www.devopsschool.com/blog/wp-content/uploads/2021/07/terraform-architecture-components-workflow-1.jpg)
 
 
 ## Getting Started with Amazon EC2
