@@ -13,7 +13,8 @@ Terraform is an infrastructure as code (IaC) tool that allows you to build, chan
 Below, HashiCorp co-founder and CTO Armon Dadgar describes how Terraform can help solve common infrastructure challenges.
 
 
-![Basic Understanding of a EC2 Instance](https://www.tutorialspoint.com/amazon_web_services/images/architecture.jpg)
+![Data Flow Diagram
+The following diagram shows the way data flows through the various services and data stores in Terraform Enterprise.](https://www.devopsschool.com/blog/wp-content/uploads/2021/07/terraform-architecture-components-workflow-1.jpg)
 
 
 ## Getting Started with Amazon EC2
