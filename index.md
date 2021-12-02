@@ -27,61 +27,22 @@ Terraform builds a resource graph and creates or modifies non-dependent resource
 ## Change Automation
 Terraform can apply complex changesets to your infrastructure with minimal human interaction. When you update configuration files, Terraform determines what changed and creates incremental execution plans that respect dependencies.
 
+## Infrastructure as code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share.
 
-![ ](https://www.youtube.com/watch?v=h970ZBgKINg)
+## Terraform is HashiCorp's infrastructure as code tool. It lets you define resources and infrastructure in human-readable, declarative configuration files, and manages your infrastructure's lifecycle. Using Terraform has several advantages over manually managing your infrastructure:
 
-Write configuration
-The set of files used to describe infrastructure in Terraform is known as a Terraform configuration. You will write your first configuration to define a single AWS EC2 instance.
+## Terraform can manage infrastructure on multiple cloud platforms.
+The human-readable configuration language helps you write infrastructure code quickly.
+Terraform's state allows you to track resource changes throughout your deployments.
+You can commit your configurations to version control to safely collaborate on infrastructure.
 
-Each Terraform configuration must be in its own working directory. Create a directory for your configuration.
+## Manage any infrastructure
+Terraform plugins called providers let Terraform interact with cloud platforms and other services via their application programming interfaces (APIs). HashiCorp and the Terraform community have written over 1,000 providers to manage resources on Amazon Web Services (AWS), Azure, Google Cloud Platform (GCP), Kubernetes, Helm, GitHub, Splunk, and DataDog, just to name a few. Find providers for many of the platforms and services you already use in the Terraform Registry. If you don't find the provider you're looking for, you can write your own.
 
-$ mkdir learn-terraform-aws-instance
-Copy
-Change into the directory.
+## Standardize your deployment workflow
+Providers define individual units of infrastructure, for example compute instances or private networks, as resources. You can compose resources from different providers into reusable Terraform configurations called modules, and manage them with a consistent language and workflow.
 
-$ cd learn-terraform-aws-instance
-Copy
-Create a file to define your infrastructure.
-
-$ touch main.tf
-Copy
-Open main.tf in your text editor, paste in the configuration below, and save the file.
-
-Tip: The AMI ID used in this configuration is specific to the us-west-2 region. If you would like to use a different region, see the Troubleshooting section for guidance.
-
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.27"
-    }
-  }
-
-  required_version = ">= 0.14.9"
-}
-
-provider "aws" {
-  profile = "default"
-  region  = "us-west-2"
-}
-
-resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "ExampleAppServerInstance"
-  }
-}
-Copy
-This is a complete configuration that you can deploy with Terraform. The following sections review each block of this configuration in more detail.
-
-»Terraform Block
-The terraform {} block contains Terraform settings, including the required providers Terraform will use to provision your infrastructure. For each provider, the source attribute defines an optional hostname, a namespace, and the provider type. Terraform installs providers from the Terraform Registry by default. In this example configuration, the aws provider's source is defined as hashicorp/aws, which is shorthand for registry.terraform.io/hashicorp/aws.
-
-You can also set a version constraint for each provider defined in the required_providers block. The version attribute is optional, but we recommend using it to constrain the provider version so that Terraform does not install a version of the provider that does not work with your configuration. If you do not specify a provider version, Terraform will automatically download the most recent version during initialization.
-
-To learn more, reference the provider source documentation.
+Terraform's configuration language is declarative, meaning that it describes the desired end-state for your infrastructure, in contrast to procedural programming languages that require step-by-step instructions to perform tasks. Terraform providers automatically calculate dependencies between resources to create or destroy them in the correct order.
 
 ### I hope this was useful to how to setup Apache Server and being expose to more Linux
 
