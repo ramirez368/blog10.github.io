@@ -3,12 +3,14 @@ layout: default
 ---
 
 
-## [Lets Get Started with EC2](https://www.youtube.com/watch?v=8TlukLu11Yo)
+## [Lets Get Started with Terrafoerm](https://www.youtube.com/watch?v=HmxkYNv1ksg)
 
 [//]: #  There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# What is Amazon EC2?
-Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.
+# Introduction to Terraform
+Terraform is an infrastructure as code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently. This includes low-level components such as compute instances, storage, and networking, as well as high-level components such as DNS entries, SaaS features, etc. Terraform can manage both existing service providers and custom in-house solutions.
+
+Below, HashiCorp co-founder and CTO Armon Dadgar describes how Terraform can help solve common infrastructure challenges.
 
 
 ![Basic Understanding of a EC2 Instance](https://www.tutorialspoint.com/amazon_web_services/images/architecture.jpg)
